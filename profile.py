@@ -1,5 +1,4 @@
-"""This is a description of your profile, it can be multi-line.
-Deploy a Single-node Ceph cluster backed by Memstore along with a Client
+"""Deploy a Single-node Ceph cluster backed by Memstore along with a Client
 
 Instructions:
 Copy the ceph config file from `/etc/ceph/ceph.conf` at node1 to the same path in node0.
