@@ -66,8 +66,8 @@ ceph-osd --id ${OSD_ID}
 # start a MDS daemon
 mkdir -p ${cluster_dir}/mds
 
-ceph osd pool create cephfs_data 8
-ceph osd pool create cephfs_metadata 8
+ceph osd pool create cephfs_data 16
+ceph osd pool create cephfs_metadata 16
 ceph fs new cephfs cephfs_metadata cephfs_data
 
 ceph-mds --id a
