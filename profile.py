@@ -15,9 +15,11 @@ request = pc.makeRequestRSpec()
 
 storage = request.RawPC("node1")
 storage.addService(pg.Execute(shell="sh", command="sudo /local/repository/micro-osd.sh"))
+storage.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD";
 
 client = request.RawPC("node0")
 client.addService(pg.Execute(shell="sh", command="sudo /local/repository/client.sh"))
+client.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD";
 
 link = request.Link(members=[client, storage])
 
